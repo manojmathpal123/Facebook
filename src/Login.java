@@ -32,7 +32,7 @@ public class Login {
 		WebDriver driver = new ChromeDriver();
 		try {
 			driver.get("https://accounts.google.com");
-			driver.manage().window().maximize();
+			//driver.manage().window().maximize();
 		/*	result = TestLinkAPIResults.TEST_PASSED;
 		    driver.findElement(By.id("Email")).sendKeys("your gmail login id");
 			Thread.sleep(2000);
