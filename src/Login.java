@@ -29,8 +29,9 @@ public class Login {
 		String chromeDriverPath = getPath() + File.separator + "drivers" + File.separator
 				+ "chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver",chromeDriverPath);
-		WebDriver driver = new ChromeDriver();
+		
 		try {
+			WebDriver driver = new ChromeDriver();
 			driver.get("https://accounts.google.com");
 			//driver.manage().window().maximize();
 		/*	result = TestLinkAPIResults.TEST_PASSED;
@@ -45,6 +46,7 @@ public class Login {
 			updateTestLinkResult(TESTCASE, null, result);
 		} 
 		catch (Exception e) {
+			System.out.println(e.getMessage());
 			result = TestLinkAPIResults.TEST_FAILED;
 			exception = e.getMessage();
 			updateTestLinkResult(TESTCASE, exception, result);
