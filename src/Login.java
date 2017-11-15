@@ -26,9 +26,9 @@ public class Login {
 
 		String result = "";
 		String exception = null;
-		String fireFoxDriverPath = getPath() + File.separator + "drivers" + File.separator
-				+ "geckodriver_64Bit.exe";
-		System.setProperty("webdriver.gecko.driver", fireFoxDriverPath);
+		String chromeDriverPath = getPath() + File.separator + "drivers" + File.separator
+				+ "chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver",chromeDriverPath);
 		
 		try {
 			WebDriver driver = new FirefoxDriver();
