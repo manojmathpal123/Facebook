@@ -26,12 +26,12 @@ public class Login {
 
 		String result = "";
 		String exception = null;
-		String chromeDriverPath = getPath() + File.separator + "drivers" + File.separator
-				+ "chromedriver.exe";
-		System.setProperty("webdriver.chrome.driver",chromeDriverPath);
+		String fireFoxDriverPath = getPath() + File.separator + "drivers" + File.separator
+				+ "geckodriver_64Bit.exe";
+		System.setProperty("webdriver.gecko.driver", fireFoxDriverPath);
 		
 		try {
-			WebDriver driver = new ChromeDriver();
+			WebDriver driver = new FirefoxDriver();
 			driver.get("https://accounts.google.com");
 			//driver.manage().window().maximize();
 		/*	result = TestLinkAPIResults.TEST_PASSED;
