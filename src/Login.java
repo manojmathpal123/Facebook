@@ -26,9 +26,9 @@ public class Login {
 
 		String result = "";
 		String exception = null;
-		System.setProperty("webdriver.chrome.driver",
-				"C:\Program Files (x86)\Jenkins\workspace\testlink_poc\test-output\chromedriver.exe");
-
+		String chromeDriverPath = getPath() + File.separator + "drivers" + File.separator
+				+ "chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver",chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		try {
 			driver.get("https://accounts.google.com");
@@ -56,6 +56,14 @@ public class Login {
 		TestLinkAPIClient testlinkAPIClient = new TestLinkAPIClient(DEV_KEY, SERVER_URL);
 		testlinkAPIClient.reportTestCaseResult(PROJECT_NAME, PLAN_NAME, TESTCASE, BUILD_NAME, exception, result);
 
+	}
+	
+	public String getPath() {
+		String path = "";
+		File file = new File("");
+		String absolutePathOfFirstFile = file.getAbsolutePath();
+		path = absolutePathOfFirstFile.replaceAll("/", "//");
+		return path;
 	}
 
 }
