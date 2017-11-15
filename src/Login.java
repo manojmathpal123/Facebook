@@ -27,7 +27,7 @@ public class Login {
 		String result = "";
 		String exception = null;
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Program Files (x86)\\Jenkins\\workspace\\testlink_poc\\test-output\\chromedriver.exe");
+				"C:\Program Files (x86)\Jenkins\workspace\testlink_poc\test-output\chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
 		try {
